@@ -1,0 +1,18 @@
+{
+"manifest_version": 2,
+
+"name": "DateLiner",
+"description": "Date liner is for extracting dates and their contexts from Internet sites",
+"version": "0.1",
+
+"permissions": [
+"http://wikipedia.org/"
+],
+"content_scripts": [
+{
+"matches": ["http://en.wikipedia.org/*"],
+"js": ["dataLiner.js"]
+}
+
+]
+}

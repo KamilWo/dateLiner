@@ -5,12 +5,15 @@
  * Time: 16:43
  * To change this template use File | Settings | File Templates.
  */
+
+var text;
+
 var dataLiner = function() {
-    var text = document.getElementById("mw-content-text").textContent;
-    /*var re1 = /\d{1,4}/;*/
-    var re1 = /\d+/g;
+    text = document.getElementById("mw-content-text").textContent;
+    var re1 = /\d{4,4}/g;
+    /*var re1 = /\d+/g;*/
     /*var re1 = ^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$;*/
-    var t = re1.exec(text);
+    var t = text.match(re1);
     /*document.write(t);*/
     alert("done");
     return t;

@@ -11,7 +11,7 @@
 "content_scripts": [
 {
 "matches": ["http://en.wikipedia.org/*"],
-"js": ["dataLiner.js"]
+"js": ["Extractor.class.js","Generator.class.js","dataLiner.js"]
 }
 
 ]

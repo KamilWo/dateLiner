@@ -2,13 +2,16 @@ function Extractor(){
 
     this.text = document.getElementById("mw-content-text").innerHTML;
 
+    //good javascript tester: http://regexpal.com/  without / at beginning or flags /igm at the end
     //var regexpTextInside = />*</igm;
-    var regExp4 = /[\s|\(][1-2][0-9][0-9][0-9][\s|,|.|\)]/igm;
-    var regExpDecades = /[\s|\(][1-2][0-9][0-9][0-9]s/igm;
-    var regExpMonths = /[\s|\(](0[1-9]|[1-9]|[1-2][0-9]|3[01])[\s|][January|February|March|April|May|June|July|August|September|October|November|December][\s|][1-2][0-9][0-9][0-9]/igm;
+    //var regExp4 = /[\s|\(](1[0-9][0-9][0-9]|200[0-9]|201[1-3])[\s|,|.|\)]/igm;   // (1992)   1992,   1992.
+    //var regExp1 = /[\s|\(]([0-9]|[1-9][0-9]|[1-2][0-9][0-9][0-9])[\s|,|.|\)]/igm;   // (1992)   1992,   1992.   1  11  111  1111
+    //var regExpDecades = /[\s|\(]1[0-9][0-9]0s/igm;       //   1990s
+    var regExpMonths = /([\s|\(]?(1[0-9][0-9][0-9]|200[0-9]|201[1-3])[(\s\-\s)|( \- )|\-|–|-](1[0-9][0-9][0-9]|200[0-9]|201[1-3]|[0-9][0-9])(\s|&nbsp;|,|\.|\))?)|((\s|\()?(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|October|Oct|November|Nov|December|Dec)(\s|&nbsp;)(3[0-1]|([1-2][0-9])|[1-9])(,&nbsp;|,\s|\s|\()(1[0-9]{3}|200[0-9]|201[1-3])(\s|\)?))|((\s|\()?((3[0-1]|([1-2][0-9])|[1-9])\/)?(3[0-1]|([1-2][0-9])|[1-9])(\s|&nbsp;)(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|October|Oct|November|Nov|December|Dec)(,&nbsp;|,\s|\s|\()(1[0-9]{3}|200[0-9]|201[1-3])(\s|\)?))|((\s|\()?(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|October|Oct|November|Nov|December|Dec)(&nbsp;|,\s|,&nbsp;|\s|\()(1[0-9]{3}|200[0-9]|201[1-3])(\s|\)?))|((3[0-1]|([1-2][0-9])|[1-9])(\s|&nbsp;)(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|October|Oct|November|Nov|December|Dec)|(1[0-9]{3}|200[0-9]|201[1-3]))/igm;    //1 January 1999
+    //var regExpMonths = /((\s|\()?((3[0-1]|([1-2][0-9])|[1-9])(\s|&nbsp;)(January|February|March|April|May|June|July|August|September|October|November|December))?((,\s)|\s|\()(1[0-9]{3}|200[0-9]|201[1-3])(\s|\))?)/igm;    //1 January 1999
     //var regExp3 = /[\u0020|\(]\d{4,4}[\u0020|,|.|\)]/igm;
-    var regExp7 = /[\s|\(][1-2][0-9][0-9][0-9][-|–|–][0-9][0-9][\s|,|.|\)|s]/igm;
-    var regExp9 = /[\s|\(][1-2][0-9][0-9][0-9][-|–|–][1-2][0-9][0-9][0-9][\s|,|.|\)|s]/igm;
+    //var regExp7 = /[\s|\(](1[0-9][0-9][0-9]|200[0-9]|201[1-3])[-|–|–][0-9][0-9][\s|,|.|\)|s]/igm;
+    //var regExp9 = /[\s|\(](1[0-9][0-9][0-9]|200[0-9]|201[1-3])[-|–|–](1[0-9][0-9][0-9]|200[0-9]|201[1-3])[\s|,|.|\)|s]/igm;
     var output = this.text;
 
 
@@ -19,16 +22,15 @@ function Extractor(){
         }
 
         var sString = '</span>';
-        var bString = '<span class="datelinerMonths" style="color: red">';
+        var bString = '<span class="dateliner" style="color: red">';
 
         for(var i = matchAll.length-1; i>=0; i--){
-            //console.log("len" + matchAll[i][0].length);
 
             var j = matchAll[i].index;
             while (true){
             if (output[j] === "<"){
             output = [output.slice(0,matchAll[i].index+matchAll[i][0].length), sString, output.slice(matchAll[i].index+matchAll[i][0].length)].join('');
-            output = [output.slice(0,matchAll[i].index+1), bString, output.slice(matchAll[i].index+1)].join('');
+            output = [output.slice(0,matchAll[i].index), bString, output.slice(matchAll[i].index)].join('');
                 break;
             } else if (output[j] === ">") {
                 break;
@@ -36,10 +38,10 @@ function Extractor(){
             j++;
         }
         }
-        alert(matchAll.length);
+        alert(matchAll.length + " months");
         this.text = output;
     };
-
+/*
     this.extract = function() {
         var match, matchAll = [];
         while ((match = regExp4.exec(output)) != null) {
@@ -53,7 +55,7 @@ function Extractor(){
             var j = matchAll[i].index;
             while (true){
             if (output[j] === "<"){
-            output = [output.slice(0,matchAll[i].index+5), sString, output.slice(matchAll[i].index+5)].join('');
+            output = [output.slice(0,matchAll[i].index+matchAll[i][0].length), sString, output.slice(matchAll[i].index+matchAll[i][0].length)].join('');
             output = [output.slice(0,matchAll[i].index+1), bString, output.slice(matchAll[i].index+1)].join('');
                 break;
             } else if (output[j] === ">") {
@@ -62,7 +64,7 @@ function Extractor(){
             j++;
         }
         }
-        alert(matchAll.length);
+        alert(matchAll.length + " 1999");
         this.text = output;
     };
 
@@ -89,7 +91,7 @@ function Extractor(){
                 j++;
             }
         }
-        alert(matchAll.length);
+        alert(matchAll.length + " 1999-99");
         this.text = output;
     };
 
@@ -115,7 +117,7 @@ function Extractor(){
                 j++;
             }
         }
-        alert(matchAll.length);
+        alert(matchAll.length + " 1999-1999");
         this.text = output;
     };
 
@@ -141,15 +143,15 @@ function Extractor(){
                 j++;
             }
         }
-        alert(matchAll.length);
+        alert(matchAll.length + " decades");
         this.text = output;
     };
 
-
+*/
     this.writeOut = function(){
 
         document.getElementById("mw-content-text").innerHTML = output;
-
+/*
         var spans = document.getElementsByClassName('dateliner');
 
         for (var spanId in spans){
@@ -184,5 +186,6 @@ function Extractor(){
             if (spansMonths[spanId].parentNode)
                 spansMonths[spanId].parentNode.style.color = 'green';
         }
+        */
     };
 }

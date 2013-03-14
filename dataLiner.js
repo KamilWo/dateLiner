@@ -13,11 +13,11 @@ function dateLiner(){
     var generator = new Generator();
     var extractor = new Extractor();
 
-    //extractor.extractMonths();
-    extractor.extract();
-    extractor.extractRanges7();
-    extractor.extractRanges9();
-    extractor.extractDecades();
+    extractor.extractMonths();
+    //extractor.extract();
+    //extractor.extractRanges7();
+    //extractor.extractRanges9();
+    //extractor.extractDecades();
     extractor.writeOut();
     generator.generate();
 }

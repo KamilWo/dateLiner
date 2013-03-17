@@ -1,0 +1,15 @@
+div, span, * {
+    /*-webkit-user-select:none;*/
+    -webkit-user-drag:none;
+
+}
+
+div.dateLinerHead {
+    cursor:pointer;
+}
+
+div.stripBg div.strip{
+    position:absolute;
+    height:500px;
+    font-size: 120px;
+}

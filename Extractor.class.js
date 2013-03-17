@@ -10,8 +10,6 @@ function Extractor(){
 
         var match, output;
 
-
-
         var matchAll = [];
         while ((match = regExp3.exec(this.text)) != null) {
             //console.log(match);
@@ -29,15 +27,17 @@ function Extractor(){
             output = [output.slice(0,matchAll[i].index+5), sString, output.slice(matchAll[i].index+5)].join('');
             output = [output.slice(0,matchAll[i].index+1), bString, output.slice(matchAll[i].index+1)].join('');
         }
-        alert(matchAll.length);
+        //alert(matchAll.length);
         document.getElementById("mw-content-text").innerHTML = output;
 
         var spans = document.getElementsByClassName('dateliner');
 
         for (spanId in spans){
-            spans[spanId].parentNode.style.color = 'green';
+            if(spans[spanId].parentNode)
+                spans[spanId].parentNode.style.color = 'green';
         }
 
     };
 
 }
+

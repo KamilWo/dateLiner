@@ -8,10 +8,14 @@
 /*var re1 = /\d+/g;*/
 /*var re1 = /^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$;*/
 
+var generator;
+var extractor;
+
 function dateLiner(){
 
-    var generator = new Generator();
-    var extractor = new Extractor();
+    generator = new Generator();
+    extractor = new Extractor();
+
 
     extractor.extract();
     generator.generate();

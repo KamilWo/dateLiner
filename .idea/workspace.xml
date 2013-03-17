@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b44f5a34-2a0a-49b2-881f-4009c6a29f75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Extractor.class.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Generator.class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Head.class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StripsBg.class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dateLiner.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extractor.class.js" afterPath="$PROJECT_DIR$/Extractor.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator.class.js" afterPath="$PROJECT_DIR$/Generator.class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.json" afterPath="$PROJECT_DIR$/MANIFEST.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataLiner.js" afterPath="$PROJECT_DIR$/dataLiner.js" />
     </list>
@@ -34,7 +37,7 @@
       <file leaf-file-name="MANIFEST.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MANIFEST.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="50" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+            <state line="15" column="1" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +46,7 @@
       <file leaf-file-name="dateLiner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dateLiner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,18 +55,16 @@
       <file leaf-file-name="dataLiner.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataLiner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="20" column="25" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Extractor.class.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Extractor.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Extractor.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="495" selection-end="495" vertical-scroll-proportion="0.42664093">
+            <state line="16" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,7 +73,43 @@
       <file leaf-file-name="Generator.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generator.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StripsBg.class.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="1.1311787">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DHTML.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="17" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Head.class.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Head.class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="188" column="44" selection-start="6395" selection-end="6405" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dateLiner.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dateLiner.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,16 +132,21 @@
         <option value="$PROJECT_DIR$/dateLiner.html" />
         <option value="$PROJECT_DIR$/Generator.js" />
         <option value="$PROJECT_DIR$/Extractor.class..js" />
-        <option value="$PROJECT_DIR$/MANIFEST.json" />
-        <option value="$PROJECT_DIR$/Generator.class.js" />
         <option value="$PROJECT_DIR$/dataLiner.js" />
+        <option value="$PROJECT_DIR$/MANIFEST.json" />
         <option value="$PROJECT_DIR$/Extractor.class.js" />
+        <option value="$PROJECT_DIR$/Head.class.js" />
+        <option value="$PROJECT_DIR$/dateLiner.css" />
+        <option value="$PROJECT_DIR$/StripsBg.class.js" />
+        <option value="$PROJECT_DIR$/Generator.class.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1365" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -185,6 +227,11 @@
       </server>
     </servers>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Archimedes EE\WebstormProjects\dateLiner" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
@@ -223,13 +270,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1365" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886878" sideWeight="0.6701389" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497394" sideWeight="0.760274" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497394" sideWeight="0.22773972" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -300,26 +347,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dataLiner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="27" selection-start="342" selection-end="365" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dateLiner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MANIFEST.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataLiner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dateLiner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -357,9 +384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="1" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dateLiner.html">
@@ -367,25 +392,41 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generator.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataLiner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="20" column="25" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Extractor.class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="495" selection-end="495" vertical-scroll-proportion="0.42664093">
+        <state line="16" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Head.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="44" selection-start="6395" selection-end="6405" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dateLiner.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generator.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="1.1311787">
           <folding />
         </state>
       </provider>

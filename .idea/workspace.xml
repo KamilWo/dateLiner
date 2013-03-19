@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44f5a34-2a0a-49b2-881f-4009c6a29f75" name="Default" comment="Objects Y m d decade">
+    <list default="true" id="b44f5a34-2a0a-49b2-881f-4009c6a29f75" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extractor.class.js" afterPath="$PROJECT_DIR$/Extractor.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataLiner.js" afterPath="$PROJECT_DIR$/dataLiner.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dateLiner.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1363723643904" ignored="false" />
+    <file path="/Dummy.txt" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1363724111105" ignored="false" />
     <file path="/dataLiner.js" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1362766437946" ignored="false" />
-    <file path="/Extractor.class.js" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1362767979734" ignored="false" />
+    <file path="/Extractor.class.js" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1363724903223" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +50,9 @@
       <file leaf-file-name="Extractor.class.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Extractor.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="1" selection-start="5315" selection-end="5315" vertical-scroll-proportion="1.3788888">
+            <state line="52" column="63" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.46993318">
               <folding>
-                <marker date="1363723689957" expanded="true" signature="2826:2836" placeholder="..." />
+                <marker date="1363725060505" expanded="false" signature="2826:2836" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -138,6 +137,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -158,19 +158,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -228,7 +227,11 @@
       <created>1363281956393</created>
       <updated>1363281956394</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Objects Y m d decade">
+      <created>1363723711169</created>
+      <updated>1363723711169</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -238,7 +241,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28782287" sideWeight="0.6701389" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28782287" sideWeight="0.6701389" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -405,9 +408,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Extractor.class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="1" selection-start="5315" selection-end="5315" vertical-scroll-proportion="1.3788888">
+        <state line="52" column="63" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.46993318">
           <folding>
-            <marker date="1363723689957" expanded="true" signature="2826:2836" placeholder="..." />
+            <marker date="1363725060505" expanded="false" signature="2826:2836" placeholder="..." />
           </folding>
         </state>
       </provider>

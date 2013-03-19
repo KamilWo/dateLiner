@@ -41,7 +41,7 @@ function Extractor() {
         for (var spanId = 0; spanId < dates.length; spanId++) {
             //tylko rok
             var regExpYear = /(1[0-9]{3})|200[0-9]|201[0-3]/ig;
-            var regExpYearMinusYear = /(\d{2})(\d{2})\-(\d{2})/ig;
+            var regExpFrom = /(F|f)rom/ig;
             var regExpDecade = /(1[0-9]{3})s|200[0-9]s|201[0-3]s/ig;
             var regExpMonth = /(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|October|Oct|November|Nov|December|Dec)/ig;
             var regExpDay = /([^\d{2}]?)(3[0-1]|[1-2][0-9]|[1-9])([^\d]{2}?)/ig;
@@ -50,6 +50,7 @@ function Extractor() {
                 dateAll.push({Y: date[0]});
             }
             //problem z datami, które pojawiają się na Wikipedii np. 1939-09-01
+            var regExpYearMinusYear = /[\s\(]?(\d{2})(\d{2})[\-–](\d{2})[\s\)]?/ig;
             if((date = regExpYearMinusYear.exec(dates[spanId].innerHTML)) !== null){
                 dateAll.push({Y: date[1]+date[3]});
                 console.log(date);
@@ -57,8 +58,10 @@ function Extractor() {
             while ((month = regExpMonth.exec(dates[spanId].innerHTML)) !== null) {
                 dateAll.push({m: month[0]});
             }
-            while ((day = regExpDay.exec(dates[spanId].innerHTML)) !== null) {
-                dateAll.push({d: day[2]});
+            if(!(regExpFrom.exec(dates[spanId].innerHTML) !== null)){
+                while ((day = regExpDay.exec(dates[spanId].innerHTML)) !== null) {
+                    dateAll.push({d: day[2]});
+                }
             }
             if((date = regExpDecade.exec(dates[spanId].innerHTML)) !== null){
                 dateAll.push({decade: date[1]});

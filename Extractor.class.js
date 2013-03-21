@@ -50,10 +50,10 @@ function Extractor() {
                 dateAll.push({Y: date[0]});
             }
             //problem z datami, które pojawiają się na Wikipedii np. 1939-09-01
-            var regExpYearMinusYear = /[\s\(]?(\d{2})(\d{2})[\-–](\d{2})[\s\)]?/ig;
+            var regExpYearMinusYear = /[\s\(]?(\d{2})(\d{2})[\-–](\d{2})[^\d]?[\s\)]?/ig;
             if((date = regExpYearMinusYear.exec(dates[spanId].innerHTML)) !== null){
                 dateAll.push({Y: date[1]+date[3]});
-                console.log(date);
+                //console.log(date);
             }
             while ((month = regExpMonth.exec(dates[spanId].innerHTML)) !== null) {
                 dateAll.push({m: month[0]});

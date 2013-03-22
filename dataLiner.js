@@ -17,10 +17,13 @@ function dateLiner(){
     extractor = new Extractor();
 
 
+    //var dateBefore = new Date();
     extractor.extract();
     extractor.writeOut();
     extractor.dateParserForView();
     generator.generate();
+    //var dateAfter = new Date();
+    //console.log(dateAfter-dateBefore);
 }
 
 dateLiner();

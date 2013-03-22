@@ -31,7 +31,7 @@ function Extractor() {
                 j++;
             }
         }
-        alert(matchAll.length + " dates");
+        //alert(matchAll.length + " dates");
         //this.text = output;
     };
 
@@ -47,27 +47,29 @@ function Extractor() {
             var regExpDay = /([^\d{2}]?)(3[0-1]|[1-2][0-9]|[1-9])([^\d]{2}?)/ig;
             var dateAll = [];
             while ((date = regExpYear.exec(dates[spanId].innerHTML)) !== null) {
-                dateAll.push({Y: date[0]});
+                dateAll.push({Y: parseInt(date[0])});
             }
             //problem z datami, które pojawiają się na Wikipedii np. 1939-09-01
             var regExpYearMinusYear = /[\s\(]?(\d{2})(\d{2})[\-–](\d{2})[^\d]?[\s\)]?/ig;
             if((date = regExpYearMinusYear.exec(dates[spanId].innerHTML)) !== null){
-                dateAll.push({Y: date[1]+date[3]});
-                //console.log(date);
+                dateAll.push({Y: parseInt(date[1]+date[3])});
             }
+
+            var months = {January: 1, Jan: 1, February: 2, Feb: 2, March: 3, Mar: 3, April: 4, Apr: 4, May: 5, June: 6, Jun: 6, July: 7, Jul:7, August: 8, Aug: 8, September: 9, Sep: 9, October: 10, Oct: 10, November: 11, Nov: 11, December: 12, Dec: 12};
             while ((month = regExpMonth.exec(dates[spanId].innerHTML)) !== null) {
-                dateAll.push({m: month[0]});
+                dateAll.push({m: months[month[0]]});
             }
             if(!(regExpFrom.exec(dates[spanId].innerHTML) !== null)){
                 while ((day = regExpDay.exec(dates[spanId].innerHTML)) !== null) {
-                    dateAll.push({d: day[2]});
+                    dateAll.push({d: parseInt(day[2])});
                 }
             }
             if((date = regExpDecade.exec(dates[spanId].innerHTML)) !== null){
-                dateAll.push({decade: date[1]});
+                dateAll.push({decade: parseInt(date[1])});
             }
             dates[spanId].meta = dateAll;
-            console.log(dates[spanId].meta, dates[spanId].innerHTML, spanId);
+            //console.log(dates[spanId].meta, dates[spanId].innerHTML, spanId);
+
         }
     };
 

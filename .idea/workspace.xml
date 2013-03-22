@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b44f5a34-2a0a-49b2-881f-4009c6a29f75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Head.class.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StripsBg.class.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dateLiner.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extractor.class.js" afterPath="$PROJECT_DIR$/Extractor.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator.class.js" afterPath="$PROJECT_DIR$/Generator.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.json" afterPath="$PROJECT_DIR$/MANIFEST.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataLiner.js" afterPath="$PROJECT_DIR$/dataLiner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StripsBg.class.js" afterPath="$PROJECT_DIR$/StripsBg.class.js" />
     </list>
     <ignored path="dateLiner.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1362590618374" ignored="false" />
     <file path="/dataLiner.js" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1362593837834" ignored="false" />
+    <file path="/Dummy.txt" changelist="b44f5a34-2a0a-49b2-881f-4009c6a29f75" time="1362590618374" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +76,7 @@
       <file leaf-file-name="StripsBg.class.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="1.1311787">
+            <state line="230" column="0" selection-start="5496" selection-end="5496" vertical-scroll-proportion="0.3555133">
               <folding />
             </state>
           </provider>
@@ -137,8 +131,8 @@
         <option value="$PROJECT_DIR$/Extractor.class.js" />
         <option value="$PROJECT_DIR$/Head.class.js" />
         <option value="$PROJECT_DIR$/dateLiner.css" />
-        <option value="$PROJECT_DIR$/StripsBg.class.js" />
         <option value="$PROJECT_DIR$/Generator.class.js" />
+        <option value="$PROJECT_DIR$/StripsBg.class.js" />
       </list>
     </option>
   </component>
@@ -174,6 +168,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,27 +198,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -275,8 +269,8 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497394" sideWeight="0.760274" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497394" sideWeight="0.22773972" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37527922" sideWeight="0.7773973" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37527922" sideWeight="0.21061644" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -402,6 +396,11 @@
         <state line="16" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Generator.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="17" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
@@ -417,16 +416,9 @@
         <state line="13" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generator.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="1.1311787">
+        <state line="230" column="0" selection-start="5496" selection-end="5496" vertical-scroll-proportion="0.3555133">
           <folding />
         </state>
       </provider>

@@ -14,8 +14,250 @@ function StripsBg(generator){
 
     this.styleCtnr();
 
-    this.addStrips();
+
+    this.canv= document.createElement('canvas');
+
+    this.canv.height = 1;
+    this.canv.width = this.generator.W;
+
+    this.canv.style.width = this.generator.W + 'px';
+    this.canv.style.height = 100 + '%';
+
+    this.ctnr.appendChild(this.canv);
+
+    this.ctx = this.canv.getContext('2d');
+
+
+
+    this.labelsCanv= document.createElement('canvas');
+
+    this.labelsCanv.height = 150;
+    this.labelsCanv.width = this.generator.W;
+
+    this.labelsCanv.style.width = this.generator.W + 'px';
+    this.labelsCanv.style.height = '150px';
+
+    this.labelsCanv.style.top = '0px';
+    this.labelsCanv.style.left = '0px';
+
+    this.labelsCanv.style.position = 'absolute';
+
+    this.ctnr.appendChild(this.labelsCanv);
+
+    this.labelsCtx = this.labelsCanv.getContext('2d');
+
+    //this.addStrips();
 }
+
+StripsBg.prototype.recalculateStrips = function (){
+
+
+
+    this.ctx.beginPath();
+    this.ctx.fillStyle = 'white';
+    this.ctx.rect(0,0,this.generator.W,1);
+    this.ctx.fill();
+
+    this.labelsCanv.height = 150;
+
+    this.labelsCtx.fillStyle = '#000';
+    this.labelsCtx.font = 'bold 25px sans-serif';
+    this.labelsCtx.textBaseline = 'top';
+
+
+
+    var maxD = this.generator.clipMaxDate;
+    var minD = this.generator.clipMinDate;
+
+    var Dspan = maxD - minD;
+
+    var minSpan = Dspan * (this.minStripW/this.generator.W);
+
+    var baseSpan = undefined;
+
+    var spanPercent = undefined;
+
+    var spanId = undefined;
+
+    this.spans.reduce(function(a,b,i,all){
+        if (minSpan>a && minSpan<b)
+        {
+            baseSpan = b;
+            spanPercent = (Math.log(minSpan)-Math.log(a))/(Math.log(b)-Math.log(a));
+            spanId=i;
+        }
+        return b;
+    },0);
+
+    //console.log(spanPercent);
+
+    var labelScale = this.generator.scale*this.spans[spanId]/10;
+
+    this.labelsCtx.setTransform(labelScale,0,0,labelScale,0,0);
+
+    var i = 0;
+
+    var s, l, h , sScale=1;
+
+    var offset = -1*(this.generator.clipMinDate%this.spans[spanId])*this.generator.scale*this.generator.dateScale;
+    var minLabel = Math.floor(this.generator.clipMinDate/this.spans[spanId])*this.spans[spanId];
+
+    var baseH = 120;
+    var baseL = 0.8;
+    var baseS = 0.5;
+
+
+    var amp1L = 0.05;
+    var amp10L = 0.05;
+
+    var amp10H = 180;
+    var amp1H = 180;
+
+    var amp10S = 0;
+    var amp1S = 0;
+
+    var labelTop = 20;
+    var label10Top = 0;
+
+    var labelOpacity = 1;
+
+    if(0<spanPercent  && spanPercent<0.1)
+    {
+        //console.log('a')
+        //tu 1 zaczynaja wygladac jak 1 , nie widac jeszcze 10
+        amp1L *= (spanPercent)/0.1;
+        amp1H *= 1;
+        amp10L *= 0;
+        amp10S *= 0;
+        amp10H *= 0;
+        label10Top = -labelTop*((0.1-spanPercent)/0.1);
+        labelTop = labelTop*((spanPercent)/0.1);
+        sScale *= (0.1-spanPercent)/0.1;
+    }
+    else if(0.1<spanPercent  && spanPercent<0.2)
+    {
+        //console.log('b')
+        // tu pojawiaja sie 10;
+        amp1L *= 1;
+        amp10L *= 0;
+        amp10S *= ((spanPercent)/0.1);
+        amp1H *= 0;
+        amp10H *= 1;
+        sScale *= ((spanPercent-0.1)/0.1);
+    }
+    else if(0.9<spanPercent)
+    {
+        //console.log('d')
+        // tu znika 1;
+        amp1L *= ((1-spanPercent)/0.1);
+        amp10L *= 0;
+        amp10S *= 1;
+        amp10H *= 1;
+        amp1H *= 0;
+        labelOpacity = ((1-spanPercent)/0.1);
+
+        //labelTop += labelTop*((spanPercent-0.9)/0.1);
+    }
+    else
+    {
+        //console.log('c')
+        //tu jest normalnie widac i 1 i 10
+
+        amp1L *= 1;
+        amp10L *= 0;
+        amp10S *= 1;
+        amp10H *= 1;
+        amp1H *= 0;
+
+    }
+    //console.log(((1-spanPercent)/0.15),1-((1-spanPercent)/0.15))
+    //console.log(amp1L,amp10L,amp10H);
+
+
+    var lastState2 = undefined;
+
+    var stripsScale  = (this.generator.scale*this.generator.dateScale*this.spans[spanId])/(this.maxSpanScaleStep*this.minStripW);
+
+    var label = minLabel;
+
+
+
+    for(var i = 0;label<this.generator.clipMaxDate;i++){
+
+
+
+        //console.log(i,label);
+
+        var state1 = Boolean(((Math.floor(label/this.spans[spanId]))%2));
+        var state2 = Boolean(((Math.floor(label/this.spans[spanId+1]))%2));
+
+        l = baseL + (amp1L*((state1)?1:-0.5)) + amp10L*(state2?1:-0.5);
+
+        h = baseH + (state2-0.5)*amp10H + (state1-0.5)*amp1H ;
+
+        s = baseS + (state2-0.5)*amp10S + (state1-0.5)*amp1S;
+
+        if(state1!=state2)
+            s *= sScale;
+
+        var pos = this.generator.date2px(label);
+        var pos2 = this.generator.date2px(label+baseSpan);
+
+        this.ctx.beginPath();
+        this.ctx.fillStyle = 'hsl('+h+','+(s*100)+'%,'+(l*100)+'%)';
+        this.ctx.rect((pos>0)?pos:0,0,pos2,1);
+        this.ctx.fill();
+
+
+        l = baseL + (amp1L*((!state1)?1:-0.5)) + amp10L*(state2?1:-0.5);
+
+        h = baseH + (state2-0.5)*amp10H + (!state1-0.5)*amp1H ;
+
+        s = baseS + (state2-0.5)*amp10S + (!state1-0.5)*amp1S ;
+
+        this.labelsCtx.fillStyle = 'hsl('+h+','+(s*100)+'%,'+(l*100)+'%)';
+        this.labelsCtx.fillText(this.labelFormat[spanId](label), (pos)/labelScale,0);
+        //this.labelsCtx.strokeStyle = 'black';
+        //this.labelsCtx.strokeText(this.labelFormat[spanId](label), (pos)/labelScale,0);
+
+
+
+        lastState2 = state2;
+
+        label += baseSpan;
+
+
+    }
+
+}
+
+StripsBg.prototype.labelScale = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+];
+
+StripsBg.prototype.labelFormat = [
+    function(label){return label},
+    function(label){
+        return [
+            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ][Math.floor((label%1)*12)];
+    },
+    function(label){
+        return label + "";
+    },
+    function(label){
+        return "'"+Math.floor((label%100)/10) + "0";
+    },
+    function(label){
+        return Math.ceil(label/100) + "w";
+    },
+    function(label){return label}
+];
 
 StripsBg.prototype.styleCtnr = function (){
 
@@ -103,27 +345,10 @@ StripsBg.prototype.addStrips = function (){
 
 
 
-StripsBg.prototype.labelFormat = [
-    function(label){return label},
-    function(label){
-        return [
-            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-        ][Math.floor((label%1)*12)];
-    },
-    function(label){
-        return label + "";
-    },
-    function(label){
-        return "'"+Math.floor((label%100)/10) + "0";
-    },
-    function(label){
-        return Math.ceil(label/100) + "w";
-    },
-    function(label){return label}
-];
 
 
-StripsBg.prototype.recalculateStrips = function (){
+
+StripsBg.prototype.recalculateStripsDiv = function (){
 
     var maxD = this.generator.clipMaxDate;
     var minD = this.generator.clipMinDate;

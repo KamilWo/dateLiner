@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44f5a34-2a0a-49b2-881f-4009c6a29f75" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator.class.js" afterPath="$PROJECT_DIR$/Generator.class.js" />
     </list>
     <ignored path="dateLiner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +48,7 @@
       <file leaf-file-name="dataLiner.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataLiner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="25" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+            <state line="23" column="1" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,25 +57,25 @@
       <file leaf-file-name="Extractor.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Extractor.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generator.class.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Generator.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generator.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="48" selection-start="4000" selection-end="4000" vertical-scroll-proportion="0.44155845">
+            <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StripsBg.class.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StripsBg.class.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="36" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.0">
+            <state line="250" column="26" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.581749">
               <folding />
             </state>
           </provider>
@@ -131,8 +130,8 @@
         <option value="$PROJECT_DIR$/Extractor.class.js" />
         <option value="$PROJECT_DIR$/Head.class.js" />
         <option value="$PROJECT_DIR$/dateLiner.css" />
-        <option value="$PROJECT_DIR$/StripsBg.class.js" />
         <option value="$PROJECT_DIR$/Generator.class.js" />
+        <option value="$PROJECT_DIR$/StripsBg.class.js" />
       </list>
     </option>
   </component>
@@ -269,8 +268,8 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2293373" sideWeight="0.37157536" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2293373" sideWeight="0.6164383" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37527922" sideWeight="0.7808219" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37527922" sideWeight="0.20719178" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -386,11 +385,23 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Extractor.class.js">
+    <entry file="file://$PROJECT_DIR$/dataLiner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0">
+        <state line="23" column="1" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Extractor.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generator.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="37" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
@@ -408,23 +419,9 @@
         <state line="13" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataLiner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StripsBg.class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="36" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Generator.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="48" selection-start="4000" selection-end="4000" vertical-scroll-proportion="0.44155845">
+        <state line="250" column="26" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.581749">
           <folding />
         </state>
       </provider>

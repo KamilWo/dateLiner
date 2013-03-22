@@ -29,7 +29,6 @@ function Generator(){
             +this.posYpx(dp.mySpan.pos.y)+'px,'
             +'0'
             +")";
-
         }
 
         for(var i = 0;i<this.hLines.length;i++){
@@ -134,22 +133,25 @@ function Generator(){
 
         for (var i = 0;i<spans.length;i++)
         {
-            var pos = getElementAbsolutePos(spans[i]);
-            var date = parseInt(spans[i].innerText);
-            if(date < 2020 && pos.y>0){
 
-                this.spansOK.push(spans[i]);
+            if(spans[i].meta.length>0 && spans[i].meta[0].Y){
+                var pos = getElementAbsolutePos(spans[i]);
+                var date = parseInt(spans[i].meta[0].Y);
+                if(date > 1850 && date < 2020 && pos.y>0){
+
+                    this.spansOK.push(spans[i]);
 
 
 
-                spans[i].pos = pos;
-                spans[i].date = date;
+                    spans[i].pos = pos;
+                    spans[i].date = date;
 
-                if(spans[i].date>maxD)
-                    maxD = spans[i].date;
+                    if(spans[i].date>maxD)
+                        maxD = spans[i].date;
 
-                if(spans[i].date<minD)
-                    minD = spans[i].date;
+                    if(spans[i].date<minD)
+                        minD = spans[i].date;
+                }
             }
         }
 
@@ -180,7 +182,6 @@ function Generator(){
 
         for (var i = 0;i<this.spansOK.length;i++)
         {
-
             var span = this.spansOK[i];
 
             var newDiv = document.createElement('div');

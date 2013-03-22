@@ -18,6 +18,8 @@ function dateLiner(){
 
 
     extractor.extract();
+    extractor.writeOut();
+    extractor.dateParserForView();
     generator.generate();
 }
 
